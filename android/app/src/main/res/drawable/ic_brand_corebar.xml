@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Marca abstracta: copa + base -->
+    <path
+        android:fillColor="#0F766E"
+        android:pathData="M54,18c-8,0 -14,6 -14,14v22c0,12 10,22 22,22h8c12,0 22,-10 22,-22V32c0,-8 -6,-14 -14,-14H54z" />
+    <path
+        android:fillColor="#D97706"
+        android:pathData="M28,78h52v8c0,6 -5,11 -11,11H39c-6,0 -11,-5 -11,-11v-8z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.35"
+        android:pathData="M40,36c0,-4 3,-7 7,-7h14c4,0 7,3 7,7v8c0,4 -3,7 -7,7H47c-4,0 -7,-3 -7,-7V36z" />
+</vector>

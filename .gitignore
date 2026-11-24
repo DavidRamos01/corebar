@@ -1,0 +1,26 @@
+# Secretos y entornos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.jks
+*.keystore
+local.properties
+
+# Dependencias y compilados
+node_modules/
+dist/
+dist-demo/
+build/
+target/
+.gradle/
+.kotlin/
+
+# Editores y sistema
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+*.tsbuildinfo

@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Theme tokens ──────────────────────────────────────────────────────────── */
+:root {
+  --c-bg:       #eef1f8;
+  --c-surface:  #ffffff;
+  --c-surface2: #f5f7fd;
+  --c-surface3: #edf0fb;
+  --c-rim:      #e2e7f5;
+  --c-rim2:     #cdd4ee;
+  --c-ink:      #0f1349;
+  --c-muted:    #6b7a99;
+  --c-faint:    #9faac2;
+}
+
+.dark {
+  --c-bg:       #0d0f1c;
+  --c-surface:  #141726;
+  --c-surface2: #1a1d30;
+  --c-surface3: #1e2236;
+  --c-rim:      #2a2f4a;
+  --c-rim2:     #363c5e;
+  --c-ink:      #e2e6f8;
+  --c-muted:    #7b8aaa;
+  --c-faint:    #4e587a;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+  }
+
+  ::-webkit-scrollbar       { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--c-rim2); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--c-muted); }
+}
+
+@layer utilities {
+  /* Cards */
+  .card {
+    @apply bg-surface border border-rim rounded-xl shadow-card;
+  }
+  .card-hover {
+    @apply card transition-all duration-200 hover:shadow-card-md hover:border-rim-2 cursor-pointer;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-up {
+    @apply badge bg-emerald-50 text-emerald-600;
+  }
+  .badge-down {
+    @apply badge bg-red-50 text-red-500;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-4 py-2 bg-accent hover:bg-accent-dim text-white font-semibold rounded-lg transition-all duration-150 active:scale-95;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-3 py-2 bg-surface2 hover:bg-surface3 text-muted hover:text-ink font-medium rounded-lg transition-all duration-150 border border-rim;
+  }
+  .btn-sidebar {
+    @apply inline-flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 w-full;
+  }
+
+  /* Inputs */
+  .input {
+    @apply bg-surface border border-rim rounded-lg px-3 py-2 text-sm text-ink placeholder-faint focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/10 transition-colors;
+  }
+  .input-icon {
+    padding-left: 2.25rem;
+  }
+  .input-error {
+    @apply border-red-500/70 focus:border-red-500 focus:ring-red-500/15;
+  }
+  .field-error {
+    @apply text-xs text-red-400 mt-1;
+  }
+
+  /* Typography */
+  .section-label {
+    @apply text-[10px] font-bold uppercase tracking-[0.15em] text-white/30;
+  }
+  .page-title {
+    @apply text-xl font-bold text-ink tracking-tight;
+  }
+  .kpi-value {
+    @apply text-[28px] font-bold text-ink tabular-nums leading-none;
+  }
+  .kpi-label {
+    @apply text-xs font-medium text-muted;
+  }
+  .table-th {
+    @apply text-[11px] font-semibold text-muted uppercase tracking-wider;
+  }
+
+  /* Tooltip for charts (keeps dark on light bg for contrast) */
+  .chart-tooltip {
+    background: #0f1349 !important;
+    border: 1px solid #242b7a !important;
+    border-radius: 8px !important;
+  }
+}
