@@ -10,6 +10,10 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/DavidRamos01/corebar/actions/workflows/tests.yml"><img src="https://github.com/DavidRamos01/corebar/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
+</p>
+
+<p align="center">
   <a href="https://corebar.es"><b>corebar.es</b></a> ·
   <a href="https://demo.corebar.es">Demo del panel</a> ·
   <a href="https://cocina-demo.corebar.es">Demo de cocina</a>
